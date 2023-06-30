@@ -1,4 +1,8 @@
 server:
   port: 8090
+
+discord:
+  token: MTEyMzA3MDUzOTA0OTc0MjM0Nw.GrgD7L.qI4n7l2_Jz6TqhmdrTtnePw31MxZsSdgzaNohQ
+  
   
   
