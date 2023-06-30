@@ -33,6 +33,10 @@ dependencies {
 
 	//DiscordBot 의존성
 	implementation("net.dv8tion:JDA:5.0.0-beta.5")
+
+    implementation 'io.github.bonigarcia:webdrivermanager:5.1.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.1.1'
+
 }
 
 tasks.named('test') {

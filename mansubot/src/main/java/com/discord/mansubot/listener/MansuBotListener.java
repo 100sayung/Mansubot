@@ -18,5 +18,7 @@ public class MansuBotListener extends ListenerAdapter{
             MessageChannel channel = event.getChannel();
             channel.sendMessage("입력한 단어 : " + content.substring(1)).queue();
         }
+
+        
     }
 }
