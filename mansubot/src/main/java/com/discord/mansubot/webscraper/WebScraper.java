@@ -20,8 +20,6 @@ public class WebScraper {
             // Navigate to the webpage
             driver.get("https://helltides.com");
 
-            // Wait for the page to finish loading
-            Thread.sleep(1000);
 
             // Find the span elements using a CSS selector
             WebElement firstSpan = driver.findElement(By.cssSelector(".text-4xl.whitespace-nowrap.lg\\:whitespace-normal.font-semibold.tracking-tight.text-white.text-center > div > div > span:first-child"));

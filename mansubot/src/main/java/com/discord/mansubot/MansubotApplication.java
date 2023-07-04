@@ -30,7 +30,7 @@ public class MansubotApplication {
                 .setActivity(Activity.playing("Code TEST")) //~~ 하는중 표시
 				.build();
 
-       WebScraper.helltidesTest();
+   //    WebScraper.helltidesTest();
 
 	}
 
