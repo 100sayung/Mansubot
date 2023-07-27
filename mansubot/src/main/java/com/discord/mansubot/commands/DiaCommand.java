@@ -25,7 +25,7 @@ public class DiaCommand implements Command{
         String userName = event.getAuthor().getName();
     
 
-        msg = "DIA COMMAND";
+        msg = "DIA COMMAND" ;
         msgChannel.sendMessage(msg).queue();
 
     }

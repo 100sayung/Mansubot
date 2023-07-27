@@ -14,7 +14,7 @@ public class CommandRegistry {
         commandMap.put("!tft", new TftCommand());
         commandMap.put("!stone", new StoneCommand());
         commandMap.put("!other", new OtherCommand());
-        commandMap.put("!help", new OtherCommand());
+        commandMap.put("!help", new HelpCommand());
     }
 
     public Command getCommand(String commandName){

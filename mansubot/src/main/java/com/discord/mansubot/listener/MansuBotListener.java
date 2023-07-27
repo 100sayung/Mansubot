@@ -35,16 +35,10 @@ public class MansuBotListener extends ListenerAdapter {
             CommandProcessor cProcessor = new CommandProcessor(cEntryService);
             cProcessor.processCommand(event);
         }
-        
-
 
        //PlayCommand 로 이후 이동
         Guild guild = event.getGuild();
         MessageChannel msgChannel = event.getChannel();
-        List<VoiceChannel> vChannel = guild.getVoiceChannels();
-        AudioManager audioManager = guild.getAudioManager();
-        audioManager.openAudioConnection(vChannel.get(1));
-        msgChannel.sendMessage(vChannel.get(0).getName() + " 채널에 들어갑니다.").queue();
     }
 
 }
