@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import com.discord.mansubot.listener.MansuBotListener;
-import com.discord.mansubot.webscraper.WebScraper;
+import com.discord.mansubot.utils.repository.CommandEntryService;
 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -24,14 +24,25 @@ public class MansubotApplication {
         DiscordToken discordTokenEntity = context.getBean(DiscordToken.class);
         String discordToken = discordTokenEntity.getToken();
 
+        CommandEntryService cEntryService = context.getBean(CommandEntryService.class);
         JDA jda = JDABuilder.createDefault(discordToken)
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT) // enables explicit access to message.getContentDisplay()
-                .addEventListeners(new MansuBotListener()) //Eventlistner 등록
+                .addEventListeners(new MansuBotListener(cEntryService)) //Eventlistner 등록
                 .setActivity(Activity.playing("Code TEST")) //~~ 하는중 표시
 				.build();
 
    //    WebScraper.helltidesTest();
 
+        // CommandTextEntry entry = new CommandTextEntry();
+        // entry.setCommandTextType("Music");
+        // entry.setCommandTextTypeDetail("Played Music Title");
+        // System.out.println(entry.getCommandTextTypeDetail());
+
+        // CommandTextEntryService cteService = context.getBean(CommandTextEntryService.class);
+        // cteService.saveCommandTextEntry(entry);
+
+
+        
 	}
 
     @Component
