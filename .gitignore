@@ -1,3 +1,5 @@
 mansubot/src/main/resources/application.yml
 
 *.yml
+*.classpath
+*.project
